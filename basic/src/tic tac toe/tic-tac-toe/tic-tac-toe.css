@@ -1,0 +1,48 @@
+h1 {
+font-weight:bold;
+margin-top:10%;
+text-align:center;
+}
+
+#container{
+height:305px;
+width:305px;
+display:grid;
+margin-left:38%;
+margin-bottom:10px;
+border: 3px solid black;
+grid-template-columns:repeat(3, 1fr);
+}
+
+.box {
+height:100px;
+width:100px;
+margin:auto;
+font-size:40px;
+text-align:center;
+border:1px solid black;
+}
+
+#text {
+margin-top:20%;
+}
+
+span {
+font-weight:bold;
+font-size: 20px;
+margin-left: 47%;
+margin-bottom: 10px;
+text-align:center;
+}
+
+.res_btn {
+display: flex;
+margin-top: 10px;
+align-items: center;
+justify-content: center;
+}
+
+#res_btn {
+width: 100px;
+padding: 10px 10px;
+}
