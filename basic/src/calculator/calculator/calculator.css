@@ -1,0 +1,51 @@
+#container{
+height: 300px;
+width:  400px;
+margin-top: 10%;
+margin-left: 30%;
+border: 3px solid black;
+}
+	
+#num_1, #lab_1{
+-webkit-appearance: none;
+margin: 0;
+margin-top: 10%;
+margin-left: 5%;
+}
+
+#num_2, #lab_2{
+-webkit-appearance: none;
+margin: 0;
+margin-top: 10%;
+margin-left: 5%;
+}
+	
+#lab_3{
+margin-top: 10%;
+margin-left: 5%;
+}
+	
+#res_n{
+margin-top:  10%;
+margin-left: 10%;
+}
+	
+#add_btn{
+margin-top: 10%;
+margin-left: 5%;
+}
+	
+#sub_btn{
+margin-top:  10%;
+margin-left: 10%;
+}
+	
+#res_btn{
+margin-top:  10%;
+margin-left: 22%;
+}
+	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+margin: 0;
+-webkit-appearance: none;
