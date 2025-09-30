@@ -1,0 +1,625 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8>
+<meta name="viewport" content="initial-scale=1.0">
+<title> Mareo </title>
+
+<style>
+
+	body {
+	background-color:#827485;
+	}
+	
+	.navbar {
+	height: 50px;
+	border-style: groove;
+	border-color: #2F1318;
+	background-color: #2F1314;
+	}
+	
+	.container-fluid {
+	display: flex;
+	}
+	
+	.navbar-header {
+	margin-top: -10px;
+	margin-left: 1%;
+	margin-right:13px;
+	}
+	
+	#header {
+	font-weight:bold;
+	color:#803B14;
+	font-size: 20px;
+	font-family: verdana, arial, sans-serif;
+	}
+	
+	ul {
+	display: flex;
+	padding-top: 5px;
+	}
+	
+	.nav-item {
+	font-weight:bold;
+	width: 50px;
+	font-size: 13px;
+	margin-top:-5px;
+	margin-left: 35px;
+	padding: 0px 0px 5px 10px;
+	font-family: verdana, sans-serif;
+	}
+	
+	#item_4 {
+	font-weight:bold;
+	width: 70px;
+	font-size: 13px;
+	margin-left: 35px;
+	padding: 0px 5px 5px 8px;
+	font-family: verdana, sans-serif;
+	}
+	
+	#item_5 {
+	width: 400px;
+	}
+	
+	#dropdown-data {
+	font-weight: bold;
+	display: none;
+	font-size: 10px;
+	padding: 3px 0px 0px 10px;
+	}
+		
+	#search {
+	margin-left: 203px;
+	height: 25px;
+	width : 175px;
+	background-color:#EDE3E4;
+	}
+	
+	li i {
+	font-size: 0.7em;
+	}
+	
+	#nav_icon {
+	margin-left: -25px;
+	}
+	
+	#first-section {
+	display: flex;
+	margin-top:1%;
+	}
+	
+	#section-item {
+	margin-left: 1%;
+	}
+	
+	.show-note {
+	margin-top: 3%;
+	border: 3px solid black;
+	padding: 0px 10px 30px; 0px;
+	background-color:#CB85D2;
+	}
+	
+	.user {
+	font-weight: bold;
+	font-family: verdana, sans-serif;
+	}
+	
+	#show-time{
+	display:table;
+	height:100px;
+	width:150px;
+	margin-top: 20%;
+	margin-left: 1%;
+	border: 3px solid black;
+	}
+	
+	.box{
+	display:table-cell;
+	padding-left : 10px;
+	padding-right: 10px;
+	background-color:#CB85D2;
+	}
+	
+	#box_3 {
+	}
+	
+	#hours {
+	margin-top:30px;
+	}
+	
+	#day {
+	font-size:0.7em;
+	color:#504B4B;
+	margin-top: 10px;
+	font-weight:bold;
+	}
+	
+	#date {
+	font-size:0.5em;
+	float: right;
+	color:#504B4B;
+	font-weight:bold;
+	}
+	
+	#year {
+	font-weight:bold;
+	font-size:0.5em;
+	color:#504F4B;
+	margin-left: 15px;
+	}
+	
+	#show_grid {
+	display: flex;
+	}
+	
+	#show_box_01 {
+	display: grid;
+	height: 50px;
+	width: 50px;
+	margin-top: 25%;
+	border: 3px solid black;
+	}
+
+	#part_01 {
+	display: flex;
+	}
+
+	#part_02 {
+	display: flex;
+	}
+
+	#box_01, #box_02,
+	#box_03, #box_04 {
+	height: 25px;
+	width: 25px;
+	border: 1px black;
+	border-style: none;
+	}
+
+	#box_01 {
+	background-color: #F41919;
+	}
+
+	#box_02 {
+	background-color: #28BD5F;
+	}
+
+	#box_03 {
+	background-color: #DC18DC;
+	}
+
+	#box_04 {
+	background-color: #232123;
+	}
+	
+	#show_box_02 {
+	display: grid;
+	height: 50px;
+	width: 50px;
+	margin-top: 25%;
+	margin-left: 50px;
+	border-radius: 50%;
+	border: 3px solid black;
+	background-color: #5E4B5D;
+	}
+		
+	.slide-show{
+	height: 500px;
+	width: 100%;
+	margin-left: 100px;				
+	margin-right: auto;
+	position: relative;
+	}
+	
+	.slide-show img{
+	height: 350px;
+	width: 712px;
+	max-width: 100%;
+	position: absolute;
+	}
+	
+	.slide-show img:first-child {
+	z-index: 1;
+	}
+	
+	p{
+	font-size:20px;
+	color:#7B5F20;
+	text-align:center;
+	font-weight:bold;
+	font-family:Verdana, sans-serif;
+	}
+	
+	#show-form {
+	display:grid;
+	}
+	
+	#show-sign {
+	margin-left: 30px;
+	height: 200px;
+	width: 220px;
+	border: 2px solid black;
+	}
+	
+	#show-sign form {
+	margin-top:  30px;
+	margin-left: 20px;
+	}
+	
+	#show-sign input {
+	margin-top: 10px;
+	}
+	
+	#register {
+	
+	}
+	
+	#show-contact {
+	margin-top: 20px;
+	width: 150px;
+	display: block;
+	margin-left: 10px;
+	}
+	
+	#contact {
+	height: 258px;
+	margin-top: 20px;
+	border: 2px solid black;
+	}
+	
+	#show-contact form {
+	margin-top:  30px;
+	margin-left: 35px;
+	}
+	
+	#show-contact label {
+	color: #DB2828;
+	}
+	
+	#show-contact input {
+	width:155px;
+	margin-top: 10px;
+	}
+	
+	#show-contact textarea {
+	width: 175px;
+	margin-top: 10px;
+	}
+	
+	#response {
+	margin-top: 8px;
+	}
+	
+	#second-section {
+	max-width: auto;
+	display: flex;
+	position: relative;
+	margin-top: -118px;
+	margin-right: 250px;
+	}
+	
+	.box_grid {
+	margin-top: -33px;
+	margin-left: 1%;
+	background-color:#CB85D2;
+	}
+	
+	#note_1 {
+	height: 130px;
+	width: 200px;
+	border: 3px solid black;
+	}
+	
+	#note_2 {
+	margin-left:50px;
+	height: 130px;
+	width: 200px;
+	border: 3px solid black;
+	}
+	
+	#note_3 {
+	margin-left:50px;
+	height: 130px;
+	width: 200px;
+	border: 3px solid black;
+	}
+	
+	#note_4 {
+	margin-left:50px;
+	height: 130px;
+	width: 200px;
+	border: 3px solid black;
+	}
+	
+	#icon {
+	margin: 0 auto;
+	display:flex;
+	font-size: 35px;
+	margin-top: 25%;
+	align-items:center; 
+	justify-content:center; 
+	}
+	
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md"> 
+	
+	<div class="container-fluid">
+	
+	<div class="navbar-header">
+	
+	<h3 id="header"> Mareo </h3>
+	
+	</div>
+	
+	<div class="collapse navbar-collapse">
+	
+	<ul type="none" class="navbar-nav">
+	
+		<li id="item_1" class="nav-item"> Item 1 </li>
+		
+		<li id="item_2" class="nav-item"> Item 2 </li>
+		
+		<li id="item_3" class="nav-item"> Item 3 </li>
+		
+		<li id="item_4" class="nav-item"> Item 4 <i class="bi bi-caret-down-fill"> </i> 
+		
+		<span id="dropdown-data" class="dropdown-data"> Data 1 </span> </li>
+										 
+		<li id="item_5" class="nav-item"> <input type="text" id="search" /> <i id="nav_icon" class="bi bi-search"> </i> </li>
+	
+	</ul>
+	
+	</div>
+	
+	</div>
+	
+	</nav>
+
+	<div id="first-section">
+		
+	<div id="section-item">
+	
+	<div class="show-note">
+	
+	<h3 id="user" class="user"> Hi User : </h3>
+	
+	<span id="u_name" class="user" style="font-size:12px"> </span>
+	
+	</div>
+	
+	<div id="show-time"> 
+
+	<div id="box_1" class="box"> <p id="hours"> </p> </div>
+	
+	<div id="box_2" class="box"> <p id="minutes"> </p> </div>
+	
+	<div id="box_3" class="box"> <p id="status"> </p> 
+		<div> <span id="date"> </span> </div> 
+		<div> <span id="day">  </span> </div> </div>
+	
+	</div>
+	
+	<div id="show_grid">
+	
+	<div id="show_box_01">
+	<div id="part_01"> 
+	<div id="box_01"> </div>
+	<div id="box_02"> </div>
+	</div>
+	<div id="part_02"> 
+	<div id="box_03"> </div>
+	<div id="box_04"> </div>
+	</div>
+	</div>
+	
+	<div id="show_box_02">
+	</div>
+	
+	</div>
+	</div>
+
+	<div class="slide-show"> 
+	
+	<img id="img_1" src="C:\Users\nidam\OneDrive\Pictures\Downloads\Images\Nature.jpg" />
+	
+	<img id="img_2" src="C:\Users\nidam\OneDrive\Pictures\Downloads\Images\Line.jpg" />
+	
+	<img id="img_3" src="C:\Users\nidam\OneDrive\Pictures\Downloads\Images\Chain.jpg" />
+	
+	<img id="img_4" src="C:\Users\nidam\OneDrive\Pictures\Downloads\Images\Ideal.jpg" />
+	
+	</div>
+	
+	<div id="show-form">
+	
+	<div id="show-sign"> 
+	
+	<form>
+	
+	<span id="signin"> Have an account? <a href="#"> Signin </a> </span> <br>
+	
+	<input id="uname" type="email" placeholder="Enter username" />
+	
+	<input id="pwd" type="password" placeholder="Enter password"/> <br>
+	
+	<input id="register" type="submit" value="Register" />
+	
+	</form>
+	
+	</div>
+	
+	<div id="show-contact"> 
+
+	<form onsubmit="response()">
+	
+	<fieldset id="contact">
+	
+	<legend> Contact Us </legend>
+	
+	<input type="text" id="firstname" placeholder="Firstname" style="margin-top:10px;" required /> <label for="firstname"> * </label> <br>
+	
+	<input type="text" id="lastname" placeholder="Lastname" required /> <label for="lastname"> * </label> <br>
+
+	<input type="email" id="email" placeholder="E-mail" required /> <label for="email"> * </label> <br>
+	
+	<input type="tel" id="phone" placeholder="Mobile no."/> <br>
+	
+	<textarea rows="3" cols="50" id="description" required placeholder="Enter description.."></textarea> <br>
+
+	<input id="submit" type="submit" value="Submit" style="width: 75px;" />
+	
+	</form>
+	
+	<div id="response"> 
+	  <span id="resp-txt"> </span>
+	</div>
+	
+	</div>
+		
+	</div>
+	
+	</div>
+
+<div id="second-section">
+
+<div id="note_1" class="box_grid">
+	
+    <i id="icon" class="bi bi-house-slash"> </i>
+	
+</div>
+
+<div id="note_2" class="box_grid">
+
+    <i id="icon" class="bi bi-calendar-event"> </i> 
+	 
+</div>
+
+<div id="note_3" class="box_grid">
+
+	<i id="icon" class="bi bi-terminal-dash"> </i>
+
+</div>
+
+<div id="note_4" class="box_grid">
+	
+	<i id="icon" class="bi bi-bar-chart-line"> </i>
+	 
+</div>
+
+</div>
+
+<script>
+
+	let item = document.getElementById("item_4");
+	
+	let status = false;
+	
+	item.addEventListener("click", function() {
+	
+	console.log(status);
+	
+	if(status == true) {
+	status = false;
+	document.getElementById("dropdown-data").style.display="none";
+	return;
+	}
+	
+	if(status == false) {
+	status = true;
+	document.getElementById("dropdown-data").style.display="block";
+	return;
+	}
+	
+	});
+
+	document.getElementById("u_name").innerHTML = "Sriram Nidamanuri";
+
+	var imgs = document.querySelectorAll('.slide-show img');
+	
+	var currentImage = 0;
+	
+	function response() {
+	document.getElementById("resp-txt").innerHTML = "Request submitted!";
+	}
+	
+	function ChangeSlide() {
+
+	var i;
+	
+	for(i=0; i<imgs.length; i++) {
+	imgs[i].style.opacity = 0;
+	}
+	
+	currentImage = (currentImage +1) % imgs.length;
+	
+	imgs[currentImage].style.opacity = 1;
+	
+	}
+	
+	setInterval(ChangeSlide, 5300);
+
+	function viewTime() {
+	
+		const now  = new Date();
+		
+	//	console.log(now);
+		
+		let hours = now.getHours();
+		
+		let minutes = now.getMinutes();
+		
+		let no = now.getDay();
+		
+		let day = now.getDate();
+		
+		let month = now.getMonth();
+		
+		let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+		
+		month = month + 1;
+		
+		let year = now.getFullYear();
+		
+		if(hours < 10) {
+		hours = 0+""+hours;
+		}
+		
+		if(minutes <10) {
+		minutes=0+""+minutes;
+		}
+		
+		document.getElementById("hours").innerHTML = hours;
+		
+		document.getElementById("minutes").innerHTML = minutes;
+		
+		if(hours<12) {
+		document.getElementById("status").innerHTML = "AM";
+		}
+		
+		else {
+		document.getElementById("status").innerHTML = "PM";
+		}
+	
+		document.getElementById("day").innerHTML = days[no];
+		
+		document.getElementById("date").innerHTML = day +"/"+month;
+		
+	//	document.getElementById("showTime").innerHTML = new Date().toLocaleTimeString();
+	
+	}
+		
+	viewTime();		
+	setInterval(viewTime, 1000);
+
+</script>
+
+</body>
+</html>
