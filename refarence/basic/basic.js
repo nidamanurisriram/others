@@ -27,6 +27,7 @@ var imgs = document.querySelectorAll('.slide-show img');
 var currentImage = 0;
 
 function response() {
+document.getElementById("response").style.display = "block";
 document.getElementById("resp-txt").innerHTML = "Request submitted!";
 }
 
@@ -98,3 +99,4 @@ document.getElementById("date").innerHTML = day +"/"+month;
 
 viewTime();
 setInterval(viewTime, 1000);
+
